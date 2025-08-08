@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Dark theme */
+:root {
+    --text-color: #fff;
+    --bg-color: #333;
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: #333;
+        --bg-color: #f7f7f7;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color:var(--text-color);
+    background-color:var(--bg-color);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.clickable-flag {
+    width:100%;
+    height:100%;
+}
+
+.clickable-flag:hover {
+    cursor:pointer;
+    padding: 10px 10px 10px 10px;
+    background-color:var(--text-color);
+}
