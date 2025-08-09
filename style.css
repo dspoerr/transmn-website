@@ -26,6 +26,15 @@ body {
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:space-between;
+}
+
+#footer {
+    justify-self:flex-end;
+}
+
+#footer a {
+    color: #888;
 }
 
 .clickable-flag {
