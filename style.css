@@ -34,11 +34,18 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
     text-align: center;
+    font-family: arial;
+    cursor: url("media/cursors/cursor0.cur") 0 0, auto;
+}
+a {
+    cursor: url("media/cursors/pointer1.cur") 0 0, auto;
+    color: var(--text-color);
+}
+section {
+    margin-bottom:1rem;
+    padding: 1px 1px 1px 1px;
+    border-style:solid;
 }
 
 /* Better placement of parrot gifs on small screen widths */
@@ -48,16 +55,15 @@ h1 {
 }
 }
 
-#footer {
-    justify-self:flex-end;
+footer {
+    color: #888;
 }
-
-#footer a {
+footer a {
     color: #888;
 }
 
 .clickable-flag {
-    cursor:pointer;
+    cursor: url("media/ok.cur"),pointer;
     width:100%;
     height:100%;
 }
@@ -65,4 +71,29 @@ h1 {
 .clickable-flag:hover {
     padding: 10px 10px 10px 10px;
     background-color:var(--text-color);
+}
+
+.marquee-outer {
+    width:100%;
+    overflow: hidden ;
+    display: flex ;
+}
+.marquee-inner {
+    white-space: nowrap ;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite ;
+    animation-name: marquee-content ;
+    animation-timing-function: linear ;
+    padding: 5px 15px 5px 15px ;
+}
+
+@keyframes marquee-content {
+	/* Element one fully ON screen at left-edge of container. */
+	from {
+		transform: translateX( +100% );
+	}
+	/* Element one fully OFF screen (just beyond left-ledge of container). */
+	to {
+		transform: translateX( -100% );
+	}
 }
